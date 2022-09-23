@@ -4,14 +4,14 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
-from cred import username, password, cvfullpath
+from cred import username, password, cvfullpath,chromeDriverPath
 import os
 
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option("excludeSwitches", ['enable-logging'])
 driver = webdriver.Chrome(
-    options=chrome_options, executable_path='D:\Projects\Automation\chromedriver.exe')
+    options=chrome_options, executable_path=chromeDriverPath)
 wait = WebDriverWait(driver, timeout=25, poll_frequency=1)
 action = ActionChains(driver)
 
